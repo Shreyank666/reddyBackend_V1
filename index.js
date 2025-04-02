@@ -323,7 +323,7 @@ const io = socketIo(server, {
 
 app.use(
   cors({
-    origin: ["https://www.annareddy.live"], // Replace '*' with the specific origin(s) you want to allow, e.g., 'https://yourdomain.com'
+    origin: ["https://www.annareddy.live","https://admin.annareddy.live"], // Replace '*' with the specific origin(s) you want to allow, e.g., 'https://yourdomain.com'
     methods: ['POST', 'GET', 'PUT', 'DELETE'], // Define allowed HTTP methods
     credentials: true, // Allow credentials like cookies to be sent
   })
