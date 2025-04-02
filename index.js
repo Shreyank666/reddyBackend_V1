@@ -332,7 +332,7 @@ app.use(cors());
 
 const MONGO_URI = process.env.mongodb_url;   
 // MongoDB connection
-mongoose.connect(`mongodb://localhost:27017/fastbet`)
+mongoose.connect(`mongodb+srv://infusion:oxPmrqHhXOdsBLPk@cluster0.rnz0y.mongodb.net/laxhmibook?retryWrites=true&w=majority&appName=Cluster0`)
   .then(() => console.log("MongoDB Connected Successfully!"))
   .catch(err => console.error("MongoDB Connection Error:", err));
 
@@ -869,7 +869,7 @@ app.get('/api/match-details/:groupById', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 4000;
-server.listen(process.env.PORT || 4000, () => {
-  console.log('Server started on port 4000');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server started on port ${PORT}`);
 });
